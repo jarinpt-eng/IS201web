@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guess the Top Netflix Show!</title>
+<style>
+    body {
+        background: #111;
+        color: white;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 40px;
+    }
+    #gameBox {
+        background: rgba(255,255,255,0.1);
+        padding: 20px;
+        border-radius: 15px;
+        width: 350px;
+        margin: auto;
+    }
+    input {
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        width: 80%;
+        margin-bottom: 15px;
+    }
+    button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background: crimson;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        margin: 5px;
+    }
+    button:hover { background: red; }
+</style>
+</head>
+<body>
+
+<h1>Guess the Top Netflix Show!</h1>
+<p>Try to guess one of the top Netflix shows currently popular.
+    here are the options"Stranger Things",
+        "The Witcher",
+        "Squid Game",
+        "Bridgerton",
+        "Money Heist",
+        "Cobra Kai",
+        "The Crown"
+</p>
+
+<div id="gameBox">
+    <input type="text" id="guess" placeholder="Enter your guess">
+    <br>
+    <button onclick="checkGuess()">Guess!</button>
+    <button onclick="showHint()">Hint</button>
+    <p id="result"></p>
+</div>
+
+<br>
+<a href="scratch.html" style="color: lightblue; font-weight: bold;">Return to Scratch Page</a>
+
+<script>
+    // List of top shows/movies
+    const topShows = [
+        "Stranger Things",
+        "The Witcher",
+        "Squid Game",
+        "Bridgerton",
+        "Money Heist",
+        "Cobra Kai",
+        "The Crown"
+    ];
+
+    // Pick a random top show
+    const secret = topShows[Math.floor(Math.random() * topShows.length)];
+
+    function checkGuess() {
+        let guess = document.getElementById('guess').value.trim();
+        let result = document.getElementById('result');
+
+        if (!guess) {
+            result.textContent = "Please enter a guess!";
+            return;
+        }
+
+        if (topShows.some(show => show.toLowerCase() === guess.toLowerCase())) {
+            if (guess.toLowerCase() === secret.toLowerCase()) {
+                result.textContent = "🎉 Correct! You guessed the top show: " + secret + "!";
+            } else {
+                result.textContent = "✅ Close! But not the secret show. Keep trying!";
+            }
+        } else {
+            result.textContent = "❌ Nope! That show isn't on the list.";
+        }
+    }
+
+    function showHint() {
+        const result = document.getElementById('result');
+        const words = secret.split(" ").length;
+        const firstLetter = secret[0];
+        result.textContent = `Hint: The show has ${words} word(s) and starts with "${firstLetter}".`;
+    }
+</script>
+
+</body>
+</html>

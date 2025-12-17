@@ -1,0 +1,77 @@
+/* styles.css — your from-scratch custom stylesheet */
+/* At least four style definitions below, font color and family specified */
+
+:root {
+  --main-font: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --accent: #0d6efd;
+}
+
+body.scratch {
+  font-family: var(--main-font);
+  color: #222; /* font color requirement */
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+/* 1. Header block */
+.header-block {
+  padding: 24px;
+  text-align: center;
+  font-size: 1.6rem;
+  color: var(--accent);
+}
+
+/* 2. Three container divs for layout (requirement: at least three) */
+.container-left {
+  float: left;
+  width: 30%;
+  padding: 12px;
+  box-sizing: border-box;
+}
+.container-middle {
+  float: left;
+  width: 40%;
+  padding: 12px;
+  box-sizing: border-box;
+}
+.container-right {
+  float: left;
+  width: 30%;
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+/* Clearfix for floats */
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* 3. Styles that specify font family (already via :root variable for the page) */
+/* 4. Link styles and anchor target highlight */
+a.anchor-target {
+  background: yellow;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* Some other nice touches */
+.cardish {
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  background: rgba(255,255,255,0.85);
+}
+
+/* custom background image fallback behavior */
+.bg-custom {
+  background-size: cover;
+  background-position: center;
+}
+
+/* responsive small-screen adjustments */
+@media (max-width: 800px) {
+  .container-left, .container-middle, .container-right { width: 100%; float:none; }
+}

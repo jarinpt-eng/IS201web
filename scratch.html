@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scratch Page</title>
+    <!-- Link to your custom stylesheet -->
+    <link rel="stylesheet" href="scratch.css">
+    <style>
+        /* Backup inline CSS in case external file fails during testing */
+        body {
+            background-image: url("https://about.netflix.com/images/meta/netflix-symbol-black.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+        .section {
+            background: rgba(0,0,0,0.6);
+            padding: 20px;
+            margin: 20px;
+            border-radius: 15px;
+        }
+        .info-box {
+            background: rgba(255,255,255,0.15);
+            padding: 15px;
+            border-radius: 10px;
+        }
+        .highlight {
+            background: rgba(255,0,0,0.3);
+            padding: 10px;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+        a { color: #ff4d4d; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <div class="section">
+        <h1 id="top">Welcome to My Scratch Page</h1>
+        <p>This page is built completely from scratch and includes all required HTML, CSS, and embedded content.</p>
+        <a href="#tableau">Jump to Tableau Graph</a>
+        <br>
+        <a href="index.html">Return to Professional Site</a>
+    </div>
+
+    <div class="section">
+        <h2>My Favorite Things</h2>
+        <ol>
+            <li>Basketball</li>
+            <li>Watch Netflix with Friends
+                <ul>
+                    <li>I like shows especially Stranger Things</li>
+                </ul>
+            </li>
+            <li>Go to the Temple</li>
+        </ol>
+    </div>
+
+    <div class="section">
+        <h2>One of My Favorite Pictures</h2>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDbj1QiAt9ewfMAmxnqfy7Jgo4tO27ubBImw&s" alt="Favorite Image" style="width:300px; border-radius:10px;">
+    </div>
+
+    <div class="section">
+    <h2>Great Scene from Stranger Things</h2>
+   <iframe width="560" height="315"
+    src="https://www.youtube.com/embed/bV0RAcuG2Ao"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+    referrerpolicy="strict-origin-when-cross-origin">
+</iframe>
+
+
+    </div>
+
+    <div class="section" id="tableau">
+        <h2>Interactive Tableau Graph</h2>
+        <!-- Tableau Embed Code Provided by User -->
+        <div class='tableauPlaceholder' id='viz1765408257719' style='position: relative'>
+            <noscript>
+                <a href='#'><img alt='Dashboard 1 ' src='https://public.tableau.com/static/images/Ne/NetflixDashboard_17651071509240/Dashboard1/1_rss.png' style='border: none' /></a>
+            </noscript>
+            <object class='tableauViz' style='display:none;'>
+                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                <param name='embed_code_version' value='3' />
+                <param name='site_root' value='' />
+                <param name='name' value='NetflixDashboard_17651071509240/Dashboard1' />
+                <param name='tabs' value='no' />
+                <param name='toolbar' value='yes' />
+                <param name='static_image' value='https://public.tableau.com/static/images/Ne/NetflixDashboard_17651071509240/Dashboard1/1.png' />
+                <param name='animate_transition' value='yes' />
+                <param name='display_static_image' value='yes' />
+                <param name='display_spinner' value='yes' />
+                <param name='display_overlay' value='yes' />
+                <param name='display_count' value='yes' />
+                <param name='language' value='en-US' />
+            </object>
+        </div>
+        <script type='text/javascript'>
+            var divElement = document.getElementById('viz1765408257719');
+            var vizElement = divElement.getElementsByTagName('object')[0];
+            if (divElement.offsetWidth > 800) {
+                vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+            } else if (divElement.offsetWidth > 500) {
+                vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+            } else {
+                vizElement.style.width='100%';vizElement.style.height='2227px';
+            }
+            var scriptElement = document.createElement('script');
+            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+            vizElement.parentNode.insertBefore(scriptElement, vizElement);
+        </script>
+    </div>
+
+    <div class="section">
+        <h2>Try My Web App</h2>
+        <a class="highlight" href="myapp.html">Click here to open my interactive web app!</a>
+    </div>
+
+    <br><br>
+    <a href="#top">Back to Top</a>
+<script src="app.js"></script>
+
+</body>
+</html>
